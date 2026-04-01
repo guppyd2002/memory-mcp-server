@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "builds": [
+    {
+      "src": "dist/http-handler.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/mcp(.*)", "dest": "/dist/http-handler.js" }
+  ]
+}
